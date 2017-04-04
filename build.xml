@@ -32,6 +32,10 @@
     </javac>
   </target>
 
+  <!-- Adding Major version and build number --> 
+  <property name="env.MAJOR_VERSION" value="1"/>
+  <property name="env.BUILD_NUMBER" value="3"/>
+  
   <!--Creates the deployable jar file  -->
   <target name="jar" depends="compile">
     <jar destfile="${dist.dir}\rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar" basedir="${build.dir}">

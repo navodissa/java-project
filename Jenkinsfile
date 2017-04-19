@@ -56,7 +56,7 @@ pipeline {
         label 'apache'
       }
       when {
-        branch 'development'
+        branch 'master'
       }
       steps{
         sh "cp /var/www/html/rectangles/all/${env.BRANCH_NAME}/rectangle_${env.BUILD_NUMBER}.jar /var/www/html/rectangles/green/rectangle_${env.BUILD_NUMBER}.jar"
@@ -67,7 +67,7 @@ pipeline {
         label 'apache'
       }
       when {
-        branch 'master'
+        branch 'developmet'
       }
       steps {
         echo "Stashing any local changes"
